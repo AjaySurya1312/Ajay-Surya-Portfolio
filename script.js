@@ -1,7 +1,7 @@
 
 
 
-// --- Vanta.js Animated Fog Background ---
+
 VANTA.FOG({
   el: "#vanta-bg",
   mouseControls: true,
@@ -17,7 +17,7 @@ VANTA.FOG({
   zoom: 1.1
 });
 
-// --- Typed.js for animated tagline ---
+
 new Typed('#typed-tagline', {
   strings: [
     "AI/ML Engineer | Web Innovator | Tech Explorer"
@@ -29,7 +29,7 @@ new Typed('#typed-tagline', {
   showCursor: true
 });
 
-// --- GSAP entrance animations ---
+
 window.addEventListener('DOMContentLoaded', () => {
   gsap.from('.hero-title', {y: 60, opacity: 0, duration: 1, ease: "bounce.out"});
   gsap.from('.hero-tagline', {y: 40, opacity: 0, duration: 1, delay: 0.3});
@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
   gsap.from('.scroll-down', {y: 30, opacity: 0, duration: 1, delay: 1.1, repeat: -1, yoyo: true});
 });
 
-// --- IntersectionObserver for scroll reveals ---
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('visible');
@@ -46,7 +46,7 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// --- Vanilla Tilt for project cards ---
+
 VanillaTilt.init(document.querySelectorAll(".project-card"), {
   max: 18,
   speed: 500,
@@ -54,7 +54,7 @@ VanillaTilt.init(document.querySelectorAll(".project-card"), {
   "max-glare": 0.35,
 });
 
-// --- Navbar active link highlight and sticky background ---
+
 const navLinks = document.querySelectorAll('.navbar a');
 window.addEventListener('scroll', () => {
   let fromTop = window.scrollY + 80;
@@ -65,13 +65,13 @@ window.addEventListener('scroll', () => {
       link.classList.add('active');
     }
   });
-  // Navbar background change
+
   const navbar = document.querySelector('.navbar');
   if(window.scrollY > 60) navbar.classList.add('scrolled');
   else navbar.classList.remove('scrolled');
 });
 
-// --- Hamburger menu for mobile ---
+
 const hamburger = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.mobile-menu');
 hamburger.addEventListener('click', () => {
@@ -81,7 +81,7 @@ mobileMenu.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => mobileMenu.classList.remove('open'));
 });
 
-// --- Contact form (demo only) ---
+
 document.querySelector('.contact-form').addEventListener('submit', function(e) {
   e.preventDefault();
   alert('Thank you for reaching out, Ajay will get back to you soon!');
